@@ -1455,13 +1455,8 @@ footer {
         <h2>Забронюйте розбір безпеки</h2>
       </div>
 
-      <form class="vsl-form fade-up" style="transition-delay:0.15s" id="leadForm" name="leads" netlify netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
+      <form class="vsl-form fade-up" style="transition-delay:0.15s" id="leadForm" name="leads" netlify onsubmit="handleSubmit(event)">
         <input type="hidden" name="form-name" value="leads">
-        <p hidden>
-          <label>Don't fill this out:
-            <input name="bot-field">
-          </label>
-        </p>
         <div class="form-group">
           <label class="form-label" for="fname">Ваше ім'я *</label>
           <input class="form-input" type="text" id="fname" name="name" placeholder="Ім'я та прізвище" required>
@@ -1498,7 +1493,7 @@ footer {
     </div>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/Vlad-Cyber" target="_blank">LinkedIn</a>
-      <a href="/cdn-cgi/l/email-protection#37415b56537741525e5b434556545c195e58">Email</a>
+      <a href="/cdn-cgi/l/email-protection#51273d3035112734383d252330323a7f383e">Email</a>
       <a href="https://veiltrack.io" target="_blank">veiltrack.io</a>
     </div>
   </div>
@@ -1555,16 +1550,20 @@ function toggleFaq(btn) {
 async function handleSubmit(e) {
   e.preventDefault();
   const form = document.getElementById('leadForm');
-  const data = new FormData(form);
+
+  const formData = new URLSearchParams();
+  formData.append('form-name', 'leads');
+  formData.append('name', form.querySelector('[name="name"]').value);
+  formData.append('email', form.querySelector('[name="email"]').value);
+  formData.append('domain', form.querySelector('[name="domain"]').value);
 
   try {
-    await fetch(window.location.pathname, {
+    const response = await fetch('/', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      body: new URLSearchParams(data).toString()
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: formData.toString()
     });
+    console.log('Netlify response:', response.status);
   } catch(err) {
     console.error('Form error:', err);
   }
