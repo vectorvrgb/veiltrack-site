@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vlad Kraevsky — VeilTrack · Безкоштовна консультація з кібербезпеки</title>
+<title>Vlad Kraevsky — Veiltrack · Розбір безпеки вашого бізнесу</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -64,15 +64,21 @@ section { padding: 88px 0; }
   border-bottom: 1px solid var(--border);
 }
 .nav-logo {
-  display: flex; flex-direction: column; gap: 1px;
+  display: flex; align-items: center;
+  text-decoration: none;
+  transition: opacity 0.2s;
 }
-.nav-logo-primary {
-  font-size: 15px; font-weight: 700; letter-spacing: 0.06em;
-  color: var(--white); text-transform: uppercase;
+.nav-logo:hover { opacity: 0.85; }
+.nav-logo img {
+  height: 56px;
+  width: auto;
+  display: block;
 }
-.nav-logo-secondary {
-  font-size: 10px; color: var(--gray); letter-spacing: 0.1em;
-  font-family: 'Space Mono', monospace;
+@media (max-width: 768px) {
+  .nav-logo img { height: 40px; }
+}
+@media (max-width: 480px) {
+  .nav-logo img { height: 34px; }
 }
 .btn-nav {
   display: inline-flex; align-items: center; gap: 6px;
@@ -418,6 +424,63 @@ section { padding: 88px 0; }
 @media (max-width: 600px) {
   .video-aftercard { padding: 22px 22px; }
   .video-aftercard li { font-size: 14px; }
+}
+
+/* ─── TAKEAWAYS ─── */
+#takeaways { background: var(--bg-0); }
+.takeaways-head {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 48px;
+}
+.takeaways-head h2 { color: var(--white); margin-bottom: 0; }
+.takeaways-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.takeaway-card {
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px 28px;
+  transition: border-color 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+.takeaway-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-3px);
+}
+.takeaway-icon {
+  width: 52px; height: 52px;
+  border-radius: 10px;
+  background: rgba(37,99,235,0.12);
+  border: 1px solid var(--border-strong);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  color: var(--blue);
+}
+.takeaway-card h3 {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.takeaway-card p {
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.6;
+  margin: 0;
+}
+@media (max-width: 760px) {
+  .takeaways-grid { grid-template-columns: 1fr; }
+  .takeaway-card { padding: 26px 22px; }
 }
 
 /* ─── CLIENT LOGOS ─── */
@@ -923,6 +986,20 @@ footer {
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
 }
 .footer-brand { font-size: 13px; font-weight: 700; color: var(--white); letter-spacing: 0.04em; }
+.footer-logo {
+  display: inline-flex; align-items: center;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.footer-logo:hover { opacity: 0.85; }
+.footer-logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+@media (max-width: 600px) {
+  .footer-logo img { height: 36px; }
+}
 .footer-links {
   display: flex; gap: 20px; align-items: center;
 }
@@ -977,10 +1054,9 @@ footer {
 
 <!-- NAV -->
 <nav id="nav">
-  <div class="nav-logo">
-    <span class="nav-logo-primary">VeilTrack</span>
-    <span class="nav-logo-secondary">Security</span>
-  </div>
+  <a href="#hero" class="nav-logo" aria-label="На головну">
+    <img src="uploads/veiltrack-logo.png" alt="Veiltrack">
+  </a>
   <a href="#form-section" class="btn-nav">Хочу знати мої вразливості</a>
 </nav>
 
@@ -1084,7 +1160,7 @@ footer {
       <h2>Подивіться як ми знаходимо те що внутрішній IT пропускає роками</h2>
     </div>
     <div class="video-shell fade-up" style="transition-delay:0.1s">
-      <div class="video-frame" id="yt-player" onclick="loadVideo(this, 'jfKfPfyJRdk')">
+      <div class="video-frame" id="yt-player">
         <div style="position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:40px 40px;opacity:0.3;"></div>
         <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(37,99,235,0.08),transparent 70%);"></div>
         <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;">
@@ -1196,7 +1272,7 @@ footer {
         >
         <div class="authority-photo-caption">
           <div class="authority-name">Владислав Краєвський</div>
-          <div class="authority-title">Pentest Team Lead · Offensive Security Engineer</div>
+          <div class="authority-title">Керівник команди з кібербезпеки · Аудит безпеки</div>
         </div>
       </div>
 
@@ -1211,7 +1287,7 @@ footer {
         <ul class="exp-list">
           <li class="exp-item">
             <div class="exp-dot"></div>
-            <div class="exp-text"><strong>Pentest Team Lead</strong> — фінансовий сектор, банки, криптобіржі, e-commerce <span style="color:var(--gray)">(2023–2026)</span></div>
+            <div class="exp-text"><strong>Керівник команди з кібербезпеки</strong> — фінансовий сектор, банки, криптобіржі, e-commerce <span style="color:var(--gray)">(2023–2026)</span></div>
           </li>
           <li class="exp-item">
             <div class="exp-dot"></div>
@@ -1323,36 +1399,59 @@ footer {
   <div class="container">
     <div class="fade-up" style="text-align: center; max-width: 600px; margin: 0 auto;">
       <div class="section-eyebrow" style="font-size: 14px; color: rgb(255, 255, 255)">Що ви отримаєте</div>
-      <h2 class="section-title">На консультації за 30 хвилин</h2>
+      <h2 class="section-title">З цього дзвінку ви підете з конкретними відповідями</h2>
       <p class="section-sub" style="margin: 0 auto 0;">Без технічного жаргону. Тільки конкретні відповіді для вашого бізнесу.</p>
     </div>
     <div class="call-grid">
       <div class="call-item fade-up">
-        <div class="call-icon">🔍</div>
+        <div class="call-icon" style="background:rgba(245,158,11,0.12);border-color:rgba(245,158,11,0.4);color:#f59e0b;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
         <div>
-          <h3>Огляд рівня захисту</h3>
-          <p>Розберемо вашу поточну інфраструктуру: що є, де прогалини, де найбільший ризик прямо зараз.</p>
+          <h3>ТОП-3 вектори атак для вашої ніші</h3>
+          <p>Конкретні сценарії — як саме атакують бізнеси у вашій сфері прямо зараз. Не загальна теорія.</p>
         </div>
       </div>
       <div class="call-item fade-up" style="transition-delay:0.1s">
-        <div class="call-icon">⚠️</div>
+        <div class="call-icon" style="background:rgba(37,99,235,0.12);color:#2563eb;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2 4 5v6c0 5 3.5 9.4 8 11 4.5-1.6 8-6 8-11V5l-8-3z"/>
+            <circle cx="11" cy="11" r="2.5"/>
+            <line x1="13" y1="13" x2="15.5" y2="15.5"/>
+          </svg>
+        </div>
         <div>
-          <h3>ТОП-3 вектори атак для вашої ніші</h3>
-          <p>Конкретні сценарії — як саме атакують бізнеси у вашій сфері і чим це загрожує на практиці.</p>
+          <h3>Огляд де ваш бізнес відкритий</h3>
+          <p>Чітке розуміння де найбільший ризик — конкретно по вашій компанії. Не загальні слова.</p>
         </div>
       </div>
       <div class="call-item fade-up" style="transition-delay:0.2s">
-        <div class="call-icon">📋</div>
+        <div class="call-icon" style="background:rgba(37,99,235,0.12);color:#2563eb;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 11l3 3 8-8"/>
+            <path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>
+          </svg>
+        </div>
         <div>
-          <h3>Першочергові дії</h3>
+          <h3>Першочергові кроки захисту</h3>
           <p>Чіткий список що виправити в першу чергу — деякі речі можна зробити одразу після дзвінка.</p>
         </div>
       </div>
       <div class="call-item fade-up" style="transition-delay:0.3s">
-        <div class="call-icon">🛡️</div>
+        <div class="call-icon" style="background:rgba(37,99,235,0.12);color:#2563eb;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <path d="M14 2v6h6"/>
+            <path d="m9 14 2 2 4-4"/>
+          </svg>
+        </div>
         <div>
-          <h3>Рекомендація по перевірці</h3>
-          <p>Якщо є сенс — запропоную який формат аудиту підходить саме вам. Без тиску і нав'язування.</p>
+          <h3>Практичний матеріал для команди</h3>
+          <p>Матеріал який зможете передати команді і впровадити одразу після розмови.</p>
         </div>
       </div>
     </div>
@@ -1384,7 +1483,7 @@ footer {
         <ul class="whom-list no">
           <li>Немає жодної онлайн-присутності чи сервісів</li>
           <li>Менше 3 людей у компанії та немає клієнтських даних</li>
-          <li>Шукаєте безкоштовний технічний аудит без намірів</li>
+          <li>Шукаєте технічний аудит без жодних намірів співпрацювати</li>
         </ul>
       </div>
     </div>
@@ -1488,12 +1587,15 @@ footer {
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-brand">VEILTRACK · VLAD KRAEVSKY</div>
-      <div class="footer-copy" style="margin-top:4px;">© 2026 · Кібербезпека для бізнесу</div>
+      <a href="#hero" class="footer-logo" aria-label="На головну">
+        <img src="uploads/veiltrack-logo.png" alt="Veiltrack">
+      </a>
+      <div class="footer-copy" style="margin-top:8px;">© 2026 · Кібербезпека для бізнесу</div>
     </div>
     <div class="footer-links">
+      <a href="https://t.me/vladkraevsky" target="_blank">Telegram</a>
       <a href="https://www.linkedin.com/in/Vlad-Cyber" target="_blank">LinkedIn</a>
-      <a href="/cdn-cgi/l/email-protection#51273d3035112734383d252330323a7f383e">Email</a>
+      <a href="/cdn-cgi/l/email-protection#5e28323f3a1e283b37322a2c3f3d35703731">Email</a>
       <a href="https://veiltrack.io" target="_blank">veiltrack.io</a>
     </div>
   </div>
