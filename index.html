@@ -1264,7 +1264,7 @@ footer {
           <div class="cert-tile-code">SANS SEC554</div>
         </div>
         <div class="cert-tile">
-          <div class="cert-tile-logo"><img src="uploads/pentest+.png" alt="PenTest+"></div>
+          <div class="cert-tile-logo"><img src="uploads/pentest+-7c63e3b0.png" alt="PenTest+"></div>
           <div class="cert-tile-code">PenTest+</div>
         </div>
         <div class="cert-tile">
@@ -1455,10 +1455,16 @@ footer {
         <h2>Забронюйте розбір безпеки</h2>
       </div>
 
-      <form class="vsl-form fade-up" style="transition-delay:0.15s" id="consultForm" onsubmit="handleSubmit(event)">
+      <form class="vsl-form fade-up" style="transition-delay:0.15s" id="leadForm" name="leads" netlify netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
+        <input type="hidden" name="form-name" value="leads">
+        <p hidden>
+          <label>Don't fill this out:
+            <input name="bot-field">
+          </label>
+        </p>
         <div class="form-group">
           <label class="form-label" for="fname">Ваше ім'я *</label>
-          <input class="form-input" type="text" id="fname" name="fname" placeholder="Ім'я та прізвище" required>
+          <input class="form-input" type="text" id="fname" name="name" placeholder="Ім'я та прізвище" required>
         </div>
 
         <div class="form-group">
@@ -1468,7 +1474,7 @@ footer {
 
         <div class="form-group">
           <label class="form-label" for="website">Сайт або домен компанії *</label>
-          <input class="form-input" type="text" id="website" name="website" placeholder="example.com" required>
+          <input class="form-input" type="text" id="website" name="domain" placeholder="example.com" required>
         </div>
 
         <button type="submit" class="btn-submit">
@@ -1492,8 +1498,8 @@ footer {
     </div>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/Vlad-Cyber" target="_blank">LinkedIn</a>
-      <a href="/cdn-cgi/l/email-protection#c8bea3baa9a1adbebba3b1a188afa5a9a1a4e6aba7a5">Email</a>
-      <a href="https://www.k-cybersec.com" target="_blank">k-cybersec.com</a>
+      <a href="/cdn-cgi/l/email-protection#92e4fef3f6d2e4f7fbfee6e0f3f1f9bcfbfd">Email</a>
+      <a href="https://veiltrack.io" target="_blank">veiltrack.io</a>
     </div>
   </div>
 </footer>
@@ -1546,15 +1552,27 @@ function toggleFaq(btn) {
   if (!isOpen) item.classList.add('open');
 }
 
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('.btn-submit');
-  btn.textContent = '✓ Заявку надіслано! Відкриваємо календар...';
-  btn.style.background = 'var(--green)';
-  btn.style.boxShadow = '0 4px 24px rgba(34,197,94,0.35)';
-  setTimeout(() => {
-    window.open('https://calendly.com/vladkr/security-briefing', '_blank');
-  }, 1200);
+  const form = document.getElementById('leadForm');
+  const data = new FormData(form);
+
+  try {
+    await fetch('/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: new URLSearchParams(data).toString()
+    });
+  } catch(err) {
+    console.error('Form error:', err);
+  }
+
+  window.open(
+    'https://calendly.com/vlad-veiltrack/security-briefing',
+    '_blank'
+  );
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(a => {
