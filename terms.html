@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Умови використання · Veiltrack</title>
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="uploads/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="uploads/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="uploads/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="uploads/favicon_io/site.webmanifest">
+<link rel="shortcut icon" href="uploads/favicon_io/favicon.ico">
+
+<!-- SEO -->
+<link rel="canonical" href="https://veiltrack.io/terms">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://veiltrack.io/terms">
+<meta property="og:title" content="Умови використання · Veiltrack">
+<meta property="og:description" content="Умови використання сайту veiltrack.io">
+<meta property="og:image" content="https://veiltrack.io/uploads/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: #080c14;
+  color: #e8edf5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+:root {
+  --bg-0: #080c14;
+  --bg-1: #0d1526;
+  --blue: #2563eb;
+  --blue-light: #3b82f6;
+  --white: #ffffff;
+  --gray: #8b9ab5;
+  --border: rgba(37, 99, 235, 0.18);
+}
+p { line-height: 1.65; }
+
+/* NAV */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 16px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(8,12,20,0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  display: flex; align-items: center;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.nav-logo:hover { opacity: 0.85; }
+.nav-logo img { height: 80px; width: auto; display: block; }
+@media (max-width: 768px) { .nav-logo img { height: 52px; } }
+.btn-nav {
+  display: inline-flex; align-items: center;
+  background: var(--blue); color: #fff;
+  padding: 10px 20px; border-radius: 6px;
+  font-size: 13px; font-weight: 600;
+  text-decoration: none; letter-spacing: 0.01em;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-nav:hover { background: var(--blue-light); transform: translateY(-1px); }
+
+/* CONTENT */
+.page-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 140px 24px 80px;
+}
+.page-eyebrow {
+  font-size: 11px;
+  font-family: 'Space Mono', monospace;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.page-title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.page-meta {
+  font-size: 13px;
+  color: var(--gray);
+  font-family: 'Space Mono', monospace;
+  margin-bottom: 56px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+.legal-section {
+  margin-bottom: 40px;
+}
+.legal-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--blue);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.legal-section p {
+  font-size: 15px;
+  color: #c5cfe0;
+  margin-bottom: 12px;
+}
+.legal-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+.legal-section ul li {
+  font-size: 15px;
+  color: #c5cfe0;
+  padding: 6px 0 6px 20px;
+  position: relative;
+}
+.legal-section ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+}
+.legal-link {
+  color: var(--blue-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.legal-link:hover { color: var(--white); }
+
+/* FOOTER */
+footer {
+  background: var(--bg-0);
+  border-top: 1px solid var(--border);
+  padding: 36px 24px;
+}
+.footer-inner {
+  max-width: 1160px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+}
+.footer-logo {
+  display: inline-flex; align-items: center;
+  text-decoration: none; transition: opacity 0.2s;
+}
+.footer-logo:hover { opacity: 0.85; }
+.footer-logo img { height: 64px; width: auto; display: block; }
+@media (max-width: 600px) { .footer-logo img { height: 44px; } }
+.footer-copy { font-size: 11px; color: var(--gray); font-family: 'Space Mono', monospace; margin-top: 6px; }
+.footer-links {
+  display: flex; gap: 20px; align-items: center; flex-wrap: wrap;
+}
+.footer-links a {
+  font-size: 12px; color: var(--gray);
+  text-decoration: none; font-family: 'Space Mono', monospace;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--blue-light); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="nav-logo" aria-label="На головну">
+    <img src="uploads/veiltrack-brand.png" alt="Veiltrack">
+  </a>
+  <a href="/#form-section" class="btn-nav">Хочу знати мої вразливості</a>
+</nav>
+
+<!-- CONTENT -->
+<div class="page-wrap">
+  <div class="page-eyebrow">Юридична інформація</div>
+  <h1 class="page-title">Умови використання</h1>
+  <div class="page-meta">Останнє оновлення: травень 2026</div>
+
+  <div class="legal-section">
+    <h3>1. Загальні положення</h3>
+    <p>Ці умови регулюють використання сайту veiltrack.io та послуг Veiltrack (ФОП Краєвський Владислав).</p>
+    <p>Використовуючи сайт або залишаючи заявку ви підтверджуєте що ознайомились і погоджуєтесь з цими умовами.</p>
+  </div>
+
+  <div class="legal-section">
+    <h3>2. Послуги</h3>
+    <p>Veiltrack надає консультаційні послуги у сфері кібербезпеки:</p>
+    <ul>
+      <li>Аудит безпеки</li>
+      <li>Тестування на проникнення</li>
+      <li>Фішингові симуляції</li>
+      <li>Консультації з кібербезпеки</li>
+    </ul>
+    <p>Розбір безпеки (первинна консультація) є попередньою діагностикою і не є повноцінним аудитом безпеки. В рамках первинної консультації не проводиться технічне тестування систем клієнта, не здійснюється доступ до інфраструктури та не надаються висновки що мають юридичну силу.</p>
+  </div>
+
+  <div class="legal-section">
+    <h3>3. Заявки і комунікація</h3>
+    <p>Залишаючи заявку на сайті ви погоджуєтесь на зв'язок з боку Veiltrack щодо вашого запиту. Ми зв'яжемось протягом 1 робочого дня.</p>
+  </div>
+
+  <div class="legal-section">
+    <h3>4. Відмова від відповідальності (Disclaimer)</h3>
+    <p>Первинна консультація (розбір безпеки) носить виключно інформаційний характер. Veiltrack не несе відповідальності за:</p>
+    <ul>
+      <li>Кібератаки, злами або витоки даних що сталися до, під час або після консультації</li>
+      <li>Збитки понесені внаслідок рішень прийнятих на основі інформації отриманої на консультації</li>
+      <li>Неповноту або неактуальність інформації якщо клієнт не надав повних даних про свою інфраструктуру</li>
+      <li>Дії третіх осіб щодо систем клієнта</li>
+    </ul>
+    <p>Повноцінний аудит безпеки з технічним тестуванням та юридично значимими висновками здійснюється виключно в рамках окремого договору.</p>
+  </div>
+
+  <div class="legal-section">
+    <h3>5. Обмеження відповідальності</h3>
+    <p>Інформація на сайті надається в інформаційних цілях. Конкретні рекомендації надаються тільки в рамках укладеного договору на послуги.</p>
+    <p>Максимальна відповідальність Veiltrack за будь-яким зобов'язанням не перевищує суму фактично сплаченої клієнтом винагороди за відповідну послугу.</p>
+  </div>
+
+  <div class="legal-section">
+    <h3>6. Запис консультацій</h3>
+    <p>Запис відеодзвінків або аудіозаписів консультацій без письмової згоди Veiltrack заборонено.</p>
+    <p>Публікація, поширення або передача третім особам будь-яких матеріалів консультації (у тому числі записів, скріншотів, цитат) без письмового дозволу заборонена.</p>
+    <p>Порушення цього пункту є підставою для відшкодування збитків відповідно до чинного законодавства України.</p>
+  </div>
+
+  <div class="legal-section">
+    <h3>7. Конфіденційність</h3>
+    <p>Всі роботи виконуються під NDA. Деталі щодо обробки персональних даних описані в <a href="/privacy" class="legal-link">Політиці конфіденційності</a>.</p>
+  </div>
+
+  <div class="legal-section">
+    <h3>8. Інтелектуальна власність</h3>
+    <p>Всі матеріали сайту (тексти, дизайн, гайди, інструкції) є власністю Veiltrack. Копіювання без письмового дозволу заборонено.</p>
+  </div>
+
+  <div class="legal-section">
+    <h3>9. Контакти</h3>
+    <p>З питань щодо умов використання:</p>
+    <ul>
+      <li><a href="/cdn-cgi/l/email-protection#691f05080d291f0c00051d1b080a02470006" class="legal-link"><span class="__cf_email__" data-cfemail="384e54595c784e5d51544c4a595b53165157">[email&#160;protected]</span></a></li>
+      <li><a href="https://t.me/srspf" target="_blank" class="legal-link">Telegram: @srspf</a></li>
+      <li><a href="https://veiltrack.io" class="legal-link">veiltrack.io</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="/" class="footer-logo" aria-label="На головну">
+        <img src="uploads/veiltrack-brand.png" alt="Veiltrack">
+      </a>
+      <div class="footer-copy" style="margin-top:8px;">© 2026 · Кібербезпека для бізнесу</div>
+    </div>
+    <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap;">
+      <div class="footer-links">
+        <a href="https://t.me/vladkraevsky" target="_blank">Telegram</a>
+        <a href="https://www.linkedin.com/in/Vlad-Cyber" target="_blank">LinkedIn</a>
+        <a href="/cdn-cgi/l/email-protection#c3b5afa2a783b5a6aaafb7b1a2a0a8edaaac"><span class="__cf_email__" data-cfemail="6c1a000d082c1a090500181e0d0f07420503">[email&#160;protected]</span></a>
+      </div>
+      <div style="width:1px;height:16px;background:rgba(37,99,235,0.35);"></div>
+      <div class="footer-links">
+        <a href="/privacy">Конфіденційність</a>
+        <a href="/terms">Умови</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
