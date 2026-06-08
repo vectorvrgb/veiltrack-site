@@ -1053,6 +1053,42 @@ footer {
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── DESKTOP TYPE UPSCALE (only ≥769px; mobile untouched) ─── */
+@media (min-width: 769px) {
+  .btn-nav { font-size: 14px; padding: 13px 26px; }
+  .section-eyebrow { font-size: 12px; }
+  .section-sub { font-size: 17px; }
+  .stat-label { font-size: 14px; }
+  .threat-niche { font-size: 12px; }
+  .threat-card h3 { font-size: 19px; }
+  .threat-list li { font-size: 14.5px; }
+  .video-aftercard li { font-size: 16.5px; }
+  .video-aftercard-label { font-size: 12px; }
+  .takeaway-card h3 { font-size: 21px; }
+  .takeaway-card p { font-size: 16px; }
+  .sector-title { font-size: 16.5px; }
+  .sector-meta { font-size: 12px; }
+  .clients-sub { font-size: 13px; }
+  .authority-text { font-size: 17px; }
+  .authority-name { font-size: 20px; }
+  .authority-title { font-size: 13px; }
+  .exp-text { font-size: 15.5px; }
+  .certs-eyebrow { font-size: 12px; }
+  .certs-sub { font-size: 14px; }
+  .cert-tile-code { font-size: 11px; }
+  .call-item h3 { font-size: 18px; }
+  .call-item p { font-size: 14.5px; }
+  .whom-col h3 { font-size: 15px; }
+  .whom-list li { font-size: 15.5px; }
+  .faq-q { font-size: 17.5px; }
+  .faq-a { font-size: 15.5px; }
+  .form-label { font-size: 12px; }
+  .form-input, .form-textarea, .form-select { font-size: 15px; }
+  .form-note { font-size: 13px; }
+  .footer-links a { font-size: 13px; }
+  .footer-copy { font-size: 12px; }
+}
 </style>
 <template id="__bundler_thumbnail" data-bg-color="#080c14">
   <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
@@ -1089,8 +1125,8 @@ footer {
     <div class="hero-inner">
       <div class="hero-content fade-up">
         <div class="hero-tag">ПЕРСОНАЛЬНИЙ РОЗБІР БЕЗПЕКИ · 30 ХВ</div>
-        <h1 class="hero-h1">Дізнайтесь де хакери знайдуть вхід у вашу мережу — <span>раніше за них.</span></h1>
-        <p class="hero-sub">30-хвилинний розбір зовнішнього периметру вашого бізнесу. Конкретний профіль ризику — без технічного жаргону.</p>
+        <h1 class="hero-h1">Дізнайтесь де хакери знайдуть вхід у вашу мережу - <span>раніше за них.</span></h1>
+        <p class="hero-sub">30-хвилинний розбір зовнішнього периметру вашого бізнесу. Конкретний профіль ризику - без технічного жаргону.</p>
         <div class="hero-cta-row">
           <a href="#form-section" class="btn-primary">
             Хочу знати мої вразливості
@@ -1118,7 +1154,7 @@ footer {
     <div class="stats-inner">
       <div class="stat-item fade-up">
         <span class="stat-num">160<span>+</span></span>
-        <div class="stat-label">пентестів та аудитів безпеки проведено</div>
+        <div class="stat-label">тестувань на вразливості та аудитів безпеки проведено</div>
       </div>
       <div class="stat-item fade-up" style="transition-delay:0.1s">
         <span class="stat-num">9<span>/10</span></span>
@@ -1126,7 +1162,7 @@ footer {
       </div>
       <div class="stat-item fade-up" style="transition-delay:0.2s">
         <span class="stat-num">6<span>р+</span></span>
-        <div class="stat-label">досвіду в offensive security та пентестуванні</div>
+        <div class="stat-label">досвіду в кібербезпеці та аудитах безпеки</div>
       </div>
     </div>
   </div>
@@ -1138,7 +1174,7 @@ footer {
     <div class="fade-up">
       <div class="section-eyebrow">Реальна картина 2025–2026</div>
       <h2 class="section-title">Що зараз атакують в Україні</h2>
-      <p class="section-sub">Кожна ніша — свій профіль ризику. Нижче — найпоширеніші вектори з реальної практики.</p>
+      <p class="section-sub">Кожна ніша - свій профіль ризику. Нижче - найпоширеніші вектори з реальної практики.</p>
     </div>
     <div class="threat-grid">
       <div class="threat-card fade-up">
@@ -1209,7 +1245,7 @@ footer {
         <ul>
           <li>Чому <strong>9 з 10 компаній</strong> вразливі прямо зараз</li>
           <li>Реальний кейс: <strong>$250,000 за один лист</strong></li>
-          <li>Як <strong>61% співробітників топ-банку</strong> відкрили двері хакерам — і чому ваша компанія не виняток</li>
+          <li>Як <strong>61% співробітників топ-банку</strong> відкрили двері хакерам - і чому ваша компанія не виняток</li>
         </ul>
       </div>
 
@@ -1295,30 +1331,30 @@ footer {
         >
         <div class="authority-photo-caption">
           <div class="authority-name">Владислав Краєвський</div>
-          <div class="authority-title">Керівник команди з кібербезпеки · Аудит безпеки</div>
+          <div class="authority-title">Керівник команди з кібербезпеки · Засновник Veiltrack</div>
         </div>
       </div>
 
       <div class="fade-up" style="transition-delay:0.1s">
-        <p class="authority-text">
-          Пентестер і Team Lead з досвідом у фінансовому секторі, банках, SaaS і e-commerce. Провів 160+ пентестів і аудитів безпеки — від невеликих агенцій до великих фінансових організацій під NDA.
-        </p>
-        <p class="authority-text">
-          Перевіряю системи так само як це робить реальний зловмисник — зовні, без підказок, без доступу зсередини. Саме тому знахідки завжди несподівані навіть для досвідчених IT-команд.
-        </p>
+        <p class="authority-text">Керую командою з кібербезпеки і особисто проводжу аудити безпеки для фінансових установ, банків, SaaS і e-commerce. 160+ перевірок безпеки - від стартапів до топ-3 банків України.</p>
+        <p class="authority-text">Перевіряю системи так само як це робить реальний зловмисник - зовні, без підказок, без доступу зсередини.</p>
 
         <ul class="exp-list">
           <li class="exp-item">
             <div class="exp-dot"></div>
-            <div class="exp-text"><strong>Керівник команди з кібербезпеки</strong> — фінансовий сектор, банки, криптобіржі, e-commerce <span style="color:var(--gray)">(2023–2026)</span></div>
+            <div class="exp-text">Керівник команди з кібербезпеки - фінансовий сектор, банки, криптобіржі, e-commerce (2024–2026)</div>
           </li>
           <li class="exp-item">
             <div class="exp-dot"></div>
-            <div class="exp-text"><strong>Security Engineer</strong> — побудова безпеки з нуля для SaaS-продукту під NDA <span style="color:var(--gray)">(2022–2024)</span></div>
+            <div class="exp-text">Security Engineer - побудова безпеки з нуля для SaaS-продукту під NDA (2022–2024)</div>
           </li>
           <li class="exp-item">
             <div class="exp-dot"></div>
-            <div class="exp-text"><strong>Penetration Tester</strong> — держсектор, правоохоронні органи, OSINT та darknet-розвідка <span style="color:var(--gray)">(2021–2023)</span></div>
+            <div class="exp-text">Аудит держсектору та правоохоронних органів · OSINT · Розвідка в даркнеті · Фізична безпека  - Конфіденційно (NDA) (2021–2023)</div>
+          </li>
+          <li class="exp-item">
+            <div class="exp-dot"></div>
+            <div class="exp-text">Pentester - банки та платіжні системи - Конфіденційна консалтингова компанія (NDA) (2020–2021)</div>
           </li>
         </ul>
       </div>
@@ -1328,7 +1364,7 @@ footer {
     <div class="certs-block">
       <div class="certs-block-head fade-up">
         <div class="certs-eyebrow">Accredited &amp; Trained</div>
-        <h3 class="certs-headline">Не слова — <span>папери</span>, які складають тільки професіонали</h3>
+        <h3 class="certs-headline">Не слова - папери, які складають тільки професіонали</h3>
         <div class="certs-sub">SANS · GIAC · OffSec · CompTIA · Cisco</div>
       </div>
 
@@ -1400,7 +1436,7 @@ footer {
           <div class="cert-tile-code">CCNA</div>
         </div>
         <div class="cert-tile">
-          <div class="cert-tile-logo"><img src="uploads/netsparker-removebg-preview.png" alt="Netsparker"></div>
+          <div class="cert-tile-logo"><img src="uploads/netsparker.webp" alt="Netsparker"></div>
           <div class="cert-tile-code">Netsparker</div>
         </div>
         <div class="cert-tile">
@@ -1409,9 +1445,7 @@ footer {
         </div>
       </div>
 
-      <div class="certs-foot fade-up" style="transition-delay:0.2s">
-        18 професійних сертифікацій · SANS · GIAC · OffSec · CompTIA · Cisco
-      </div>
+      <div class="certs-foot fade-up" style="transition-delay:0.2s">20+ професійних сертифікацій</div>
     </div>
 
   </div>
@@ -1436,12 +1470,12 @@ footer {
         </div>
         <div>
           <h3>ТОП-3 вектори атак для вашої ніші</h3>
-          <p>Конкретні сценарії — як саме атакують бізнеси у вашій сфері прямо зараз. Не загальна теорія.</p>
+          <p>Конкретні сценарії - як саме атакують бізнеси у вашій сфері прямо зараз. Не загальна теорія.</p>
         </div>
       </div>
       <div class="call-item fade-up" style="transition-delay:0.1s">
-        <div class="call-icon" style="background:rgba(37,99,235,0.12);color:#2563eb;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <div class="call-icon" style="background:rgba(37,99,235,0.12);border-color:rgba(37,99,235,0.4);color:#3b82f6;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M12 2 4 5v6c0 5 3.5 9.4 8 11 4.5-1.6 8-6 8-11V5l-8-3z"/>
             <circle cx="11" cy="11" r="2.5"/>
             <line x1="13" y1="13" x2="15.5" y2="15.5"/>
@@ -1449,24 +1483,24 @@ footer {
         </div>
         <div>
           <h3>Огляд де ваш бізнес відкритий</h3>
-          <p>Чітке розуміння де найбільший ризик — конкретно по вашій компанії. Не загальні слова.</p>
+          <p>Чітке розуміння де найбільший ризик - конкретно по вашій компанії. Не загальні слова.</p>
         </div>
       </div>
       <div class="call-item fade-up" style="transition-delay:0.2s">
-        <div class="call-icon" style="background:rgba(37,99,235,0.12);color:#2563eb;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <div class="call-icon" style="background:rgba(34,197,94,0.12);border-color:rgba(34,197,94,0.4);color:#22c55e;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M9 11l3 3 8-8"/>
             <path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>
           </svg>
         </div>
         <div>
           <h3>Першочергові кроки захисту</h3>
-          <p>Чіткий список що виправити в першу чергу — деякі речі можна зробити одразу після дзвінка.</p>
+          <p>Чіткий список що виправити в першу чергу - деякі речі можна зробити одразу після дзвінка.</p>
         </div>
       </div>
       <div class="call-item fade-up" style="transition-delay:0.3s">
-        <div class="call-icon" style="background:rgba(37,99,235,0.12);color:#2563eb;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <div class="call-icon" style="background:rgba(139,92,246,0.14);border-color:rgba(139,92,246,0.4);color:#a78bfa;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
             <path d="M14 2v6h6"/>
             <path d="m9 14 2 2 4-4"/>
@@ -1526,43 +1560,35 @@ footer {
           Чи зашкодите ви моїй системі під час перевірки?
           <span class="faq-icon">+</span>
         </button>
-        <div class="faq-a">
-          На першому дзвінку — ні. Ми аналізуємо тільки публічно доступні джерела без будь-якого доступу до ваших систем. Тестування починається тільки після підписання договору і вашого письмового дозволу.
-        </div>
+        <div class="faq-a">На першому дзвінку - ні. Ми аналізуємо тільки публічно доступні джерела без будь-якого доступу до ваших систем. Тестування починається тільки після підписання договору і вашого письмового дозволу.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           У нас є IT-відділ. Навіщо нам зовнішній аудит?
           <span class="faq-icon">+</span>
         </button>
-        <div class="faq-a">
-          IT будує і підтримує системи. Ми атакуємо їх очима зловмисника. Це різні навички. З 10 компаній з IT-відділом які я перевіряв — у 9 були критичні знахідки яких команда не бачила.
-        </div>
+        <div class="faq-a">IT будує і підтримує системи. Ми атакуємо їх очима зловмисника. Це різні навички. З 10 компаній з IT-відділом які я перевіряв - у 9 були критичні знахідки яких команда не бачила.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           Що якщо ви нічого не знайдете?
           <span class="faq-icon">+</span>
         </button>
-        <div class="faq-a">Дзвінок — це діагностика а не пентест. Навіть якщо після розмови виявиться що у вас все добре — ви підете з чітким розумінням своїх ризиків і конкретними кроками що робити далі.</div>
+        <div class="faq-a">Дзвінок - це діагностика а не пентест. Навіть якщо після розмови виявиться що у вас все добре - ви підете з чітким розумінням своїх ризиків і конкретними кроками що робити далі.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           Наші дані залишаться конфіденційними?
           <span class="faq-icon">+</span>
         </button>
-        <div class="faq-a">
-          Так. NDA підписується до початку будь-якої роботи. Ми не розкриваємо клієнтів — всі кейси на сайті анонімізовані.
-        </div>
+        <div class="faq-a">Так. NDA підписується до початку будь-якої роботи. Ми не розкриваємо клієнтів - всі кейси на сайті анонімізовані.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           Скільки часу займає весь процес?
           <span class="faq-icon">+</span>
         </button>
-        <div class="faq-a">
-          Дзвінок — 30 хвилин. Якщо вирішуємо рухатись далі — результат за 48–72 години.
-        </div>
+        <div class="faq-a">Дзвінок - 30 хвилин. Якщо вирішуємо рухатись далі - результат за 48-72 години.</div>
       </div>
     </div>
   </div>
@@ -1610,8 +1636,7 @@ footer {
             Я погоджуюсь з
             <a href="/privacy" target="_blank" style="color:#3b82f6;text-decoration:none;">Політикою конфіденційності</a>
             та
-            <a href="/terms" target="_blank" style="color:#3b82f6;text-decoration:none;">Умовами використання</a>,
-            включаючи відмову від відповідальності щодо характеру первинної консультації
+            <a href="/terms" target="_blank" style="color:#3b82f6;text-decoration:none;">Умовами використання</a>.
           </label>
         </div>
 
@@ -1620,8 +1645,7 @@ footer {
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
         <div class="form-note">
-          Це не сейлз-дзвінок. Тільки технічні факти про вашу безпеку. Без зобов'язань.
-        </div>
+</div>
       </form>
     </div>
   </div>
@@ -1640,12 +1664,12 @@ footer {
       <div class="footer-links">
         <a href="https://t.me/vladkraevsky" target="_blank">Telegram</a>
         <a href="https://www.linkedin.com/in/Vlad-Cyber" target="_blank">LinkedIn</a>
-        <a href="/cdn-cgi/l/email-protection#43352f22270335262a2f37312220286d2a2c"><span class="__cf_email__" data-cfemail="1c6a707d785c6a797570686e7d7f77327573">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#71071d1015310714181d050310121a5f181e"><span class="__cf_email__" data-cfemail="2f59434e4b6f594a46435b5d4e4c44014640">[email&#160;protected]</span></a>
       </div>
       <div style="width:1px;height:16px;background:rgba(37,99,235,0.35);"></div>
       <div class="footer-links">
         <a href="/privacy">Конфіденційність</a>
-        <a href="/terms">Умови</a>
+        <a href="/terms">Умови використання</a>
       </div>
     </div>
   </div>
