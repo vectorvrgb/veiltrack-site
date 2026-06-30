@@ -13,14 +13,14 @@
 <link rel="shortcut icon" href="uploads/favicon_io/favicon.ico">
 
 <!-- SEO -->
-<meta name="description" content="Дізнайтесь де хакери знайдуть вхід у вашу мережу — раніше за них. Персональний розбір безпеки · 30 хвилин. Veiltrack - кібербезпека для бізнесу.">
+<meta name="description" content="Аудит безпеки та пентест для українського бізнесу. Дізнайтесь де хакери знайдуть вхід у вашу мережу — раніше за них. Персональний розбір безпеки · 30 хвилин · Veiltrack.">
 <link rel="canonical" href="https://veiltrack.io/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://veiltrack.io/">
 <meta property="og:title" content="Розбір безпеки вашого бізнесу · Veiltrack">
-<meta property="og:description" content="Дізнайтесь де хакери знайдуть вхід у вашу мережу - раніше за них. Персональний розбір безпеки · 30 хвилин.">
+<meta property="og:description" content="Аудит безпеки та пентест для українського бізнесу. Дізнайтесь де хакери знайдуть вхід у вашу мережу — раніше за них. Персональний розбір безпеки · 30 хвилин · Veiltrack.">
 <meta property="og:image" content="https://veiltrack.io/uploads/og-image.png">
 
 <!-- Twitter -->
@@ -1134,6 +1134,7 @@ footer {
           </a>
           <span class="hero-trust"></span>
         </div>
+        <div id="heroAvailability" style="text-align:center; font-size:14px; color:var(--muted, #8a8a8a); margin-top:14px; font-weight:400;"></div>
       </div>
 
       <div class="hero-photo-wrap fade-up" style="transition-delay: 0.15s">
@@ -1469,7 +1470,7 @@ footer {
           </svg>
         </div>
         <div>
-          <h3>ТОП-3 вектори атак для вашої ніші</h3>
+          <h3>Як саме зламують компанії у вашій ніші прямо зараз</h3>
           <p>Конкретні сценарії - як саме атакують бізнеси у вашій сфері прямо зараз. Не загальна теорія.</p>
         </div>
       </div>
@@ -1482,7 +1483,7 @@ footer {
           </svg>
         </div>
         <div>
-          <h3>Огляд де ваш бізнес відкритий</h3>
+          <h3>Де конкретно у вас є діри - і як туди заходять</h3>
           <p>Чітке розуміння де найбільший ризик - конкретно по вашій компанії. Не загальні слова.</p>
         </div>
       </div>
@@ -1494,7 +1495,7 @@ footer {
           </svg>
         </div>
         <div>
-          <h3>Першочергові кроки захисту</h3>
+          <h3>Що закрити в першу чергу - деякі речі можна зробити одразу після дзвінка</h3>
           <p>Чіткий список що виправити в першу чергу - деякі речі можна зробити одразу після дзвінка.</p>
         </div>
       </div>
@@ -1507,7 +1508,7 @@ footer {
           </svg>
         </div>
         <div>
-          <h3>Практичний матеріал для команди</h3>
+          <h3>Готовий список для вашої команди - Матеріал який команда зрозуміє без пояснень</h3>
           <p>Матеріал який зможете передати команді і впровадити одразу після розмови.</p>
         </div>
       </div>
@@ -1620,6 +1621,11 @@ footer {
           <input class="form-input" type="text" id="website" name="domain" placeholder="example.com" required>
         </div>
 
+        <div class="form-group">
+          <label class="form-label" for="contact">Telegram або телефон (необов'язково)</label>
+          <input class="form-input" type="text" id="contact" name="contact" placeholder="@username або +380...">
+        </div>
+
         <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:16px;">
           <input
             type="checkbox"
@@ -1664,7 +1670,7 @@ footer {
       <div class="footer-links">
         <a href="https://t.me/vladkraevsky" target="_blank">Telegram</a>
         <a href="https://www.linkedin.com/in/Vlad-Cyber" target="_blank">LinkedIn</a>
-        <a href="/cdn-cgi/l/email-protection#71071d1015310714181d050310121a5f181e"><span class="__cf_email__" data-cfemail="2f59434e4b6f594a46435b5d4e4c44014640">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#20564c4144605645494c545241434b0e494f"><span class="__cf_email__" data-cfemail="93e5fff2f7d3e5f6faffe7e1f2f0f8bdfafc">[email&#160;protected]</span></a>
       </div>
       <div style="width:1px;height:16px;background:rgba(37,99,235,0.35);"></div>
       <div class="footer-links">
@@ -1683,6 +1689,20 @@ footer {
 </div>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function() {
+  const months = ['січня','лютого','березня','квітня','травня','червня','липня','серпня','вересня','жовтня','листопада','грудня'];
+  const d = new Date();
+  d.setDate(d.getDate() + 6);
+  let day = d.getDay(); // 0=Sun,5=Fri,6=Sat
+  if (day === 5 || day === 6 || day === 0) {
+    const addDays = day === 5 ? 3 : (day === 6 ? 2 : 1);
+    d.setDate(d.getDate() + addDays);
+  }
+  const formatted = `${d.getDate()} ${months[d.getMonth()]}`;
+  const el = document.getElementById('heroAvailability');
+  if (el) el.textContent = `Беремо не більше 4 нових клієнтів на місяць · Наступні вільні місця з ${formatted}`;
+})();
+
 function loadVideo(el, videoId) {
   el.innerHTML = `<iframe
     src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1"
